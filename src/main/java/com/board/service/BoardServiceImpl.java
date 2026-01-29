@@ -48,7 +48,10 @@ public class BoardServiceImpl implements BoardService {
 	public int remove(Board b) throws Exception {
 		int count = 0;
 		try {
-			boardRepository.deleteById(b.getNo());
+			if (boardRepository.existsById(b.getNo())) {
+	            boardRepository.deleteById(b.getNo());
+	            count = 1; 
+	        }
 		} catch (Exception e) {
 			log.info(e.toString());
 			count = 0;

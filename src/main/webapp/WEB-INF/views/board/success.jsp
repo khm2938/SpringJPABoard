@@ -35,8 +35,8 @@
 
 <div class="container">
     <div class="success-icon">✔</div>
-    <h2>게시글 입력 성공</h2>
-    <p>${message}</p>
+    <h2>${message}</h2>
+    
     
     <div class="btn-area">
         <a href="/board/boardList" class="btn btn-main">목록 확인하기</a>

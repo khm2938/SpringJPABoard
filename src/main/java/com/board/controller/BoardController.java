@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 public class BoardController {
 	@Autowired
 	private BoardService boardService;
-
+	
 	@GetMapping("/insertForm")
 	public String boardInsertForm(Model model) {
 		return "board/insertForm";
@@ -76,7 +76,7 @@ public class BoardController {
 		try {
 			int count = boardService.remove(board);
 			if (count > 0) {
-				model.addAttribute("message", "%d 님의 게시글이 삭제되었습니다.".formatted(board.getNo()));
+				model.addAttribute("message", "%d번 게시글이 삭제되었습니다.".formatted(board.getNo()));
 				return "board/success";
 			}
 			model.addAttribute("board", board);
