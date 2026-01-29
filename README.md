@@ -1,5 +1,5 @@
 📋 Spring Boot JPA 게시판 (JPA Board Project)
-Spring Boot와 Spring Data JPA를 활용하여 구축한 기본적인 CRUD 게시판 프로젝트야.
+Spring Boot와 Spring Data JPA를 활용을 연습하기 위해 기본적인 CRUD 게시판 프로젝트
 
 🛠 Tech Stack
 ·Framework: Spring Boot 3.x
