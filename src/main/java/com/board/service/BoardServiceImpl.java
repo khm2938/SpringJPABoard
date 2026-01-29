@@ -30,7 +30,7 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	@Transactional(readOnly = true)
 	public Board read(Board b) throws Exception {
-		return boardRepository.getReferenceById(b.getNo());
+		return boardRepository.findById(b.getNo()).orElse(null);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class BoardServiceImpl implements BoardService {
 		} else if (searchType.equals("title")) {
 			return boardRepository.findByTitleContaining(keyword);
 		}
-		
+		return boardRepository.findAll(Sort.by(Direction.DESC,"no"));
 	}
 
 }
